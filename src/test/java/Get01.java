@@ -4,7 +4,7 @@ import org.junit.Test;
 import static io.restassured.RestAssured.*;
 
 public class Get01 {
-    /*
+    /*.
     1) Postman, manuel API testleri icin kullandik,
     2) Otomasyon testleri icin de Rest Assured Library kullancagiz.
     3) Otomasyon testlerimizi yaparken asagidaki adimlari izliyoruz;
@@ -47,6 +47,7 @@ public class Get01 {
 
         // ii) Set the expected Data (beklenen datanin olusturulmasi, Post, Put, Patch)
         // Bizden post, put ya da patch istenmedigi icin bu case de kullanmayacagiz.
+
         // iii) Type code to send request ( Talep gondermek icin kod yazimi)
         Response response=given().when().get(url);
         response.prettyPrint();
