@@ -25,7 +25,7 @@ public class Get03 extends JsonplaceholderBaseUrl {
 
     @Test
     public void get01() {
-        //  i)  Set the URL
+        //  i)  Set the URL.
         spec.pathParams("first","todos","second",23);
 
         // ii) Set the expected Data (beklenen datanin olusturulmasi, Post, Put, Patch)
