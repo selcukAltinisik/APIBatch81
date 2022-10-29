@@ -60,16 +60,16 @@ public class Get06 extends RestfulBaseUrl {
         And
             Response body should be like;
          {
-    "firstname": "Bradley",
-    "lastname": "Pearson",
-    "totalprice": 132,
-    "depositpaid": false,
-    "bookingdates": { // outer json
-        "checkin": "2022-10-27", // inner json
-        "checkout": "2022-11-07" // inner json
-    },
-    "additionalneeds": "None"
-}
+            "firstname": "Bradley",
+            "lastname": "Pearson",
+            "totalprice": 132,
+            "depositpaid": false,
+            "bookingdates": { // outer json
+                "checkin": "2022-10-27", // inner json
+                "checkout": "2022-11-07" // inner json
+            },
+            "additionalneeds": "None"
+         }
          */
         // 1. Yol
         response.

@@ -47,10 +47,10 @@ public class Get07 extends JsonplaceholderBaseUrl {
         response.then().assertThat().statusCode(200);
         assertEquals(200,response.getStatusCode());
 
-        //2)Print all ids greater than 190 on the console ==> id si 190 dan buyuk olanlari konsola yazdirin
-        JsonPath json=response.jsonPath();
+        //  2)Print all ids greater than 190 on the console ==> id si 190 dan buyuk olanlari konsola yazdirin
+        JsonPath json = response.jsonPath();
 
-        List<Integer> idler=json.getList("findAll{it.id>190}.id"); // Groovy Language = Java Temelli programlama Dili
+        List<Integer> idler = json.getList("findAll{it.id>190}.id"); // Groovy Language = Java Temelli programlama Dili
         System.out.println("Id'si 190 dan Buyuk Olanlar :"+idler);
 
         // Assert that there are 10 ids greater than 190 == > 10 tane id nin 190 dan buyuk oldugunu dogrulayin

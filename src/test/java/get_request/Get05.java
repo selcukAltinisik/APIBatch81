@@ -20,14 +20,14 @@ public class Get05 extends RestfulBaseUrl {
     Then
         Status code is 200
     And
-        Among the data there should be someone whose firstname is "Ali" and lastname is "Cengiz"
+        Among the data there should be someone whose firstname is "Javier" and lastname is "Combs"
     */
 
     @Test
     public void get01() {
         //  https://restful-booker.herokuapp.com/booking?firstname=Ali&lastname=Cengiz
         //  1)  Set the Url
-        spec.pathParam("first","booking").queryParams("firstname","Ali","lastname","Cengiz");
+        spec.pathParam("first","booking").queryParams("firstname","Javier","lastname","Combs");
 
         //  2)  Set The Expected  Data (Put, Patch, Post)
 
