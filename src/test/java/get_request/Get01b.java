@@ -1,5 +1,6 @@
 package get_request;
 
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Test;
 
@@ -22,15 +23,28 @@ public class Get01b {
 
     @Test
     public void get01() {
-        //  i)  Set the URL,
-        String url = "ttps://reqres.in/api/users/3"
+        // 1. Set The Url
+        String url = "https://reqres.in/api/users/3";
+
+
+        //  2. Set the Expected Data (beklenen datanin olusturulmasi, Post, Put, Patch)
+
+        //  3. Send The Request And Get The Response ( Talep gondermek icin kod yazimi)
         Response response = given().when().get(url);
         response.prettyPrint();
 
-        //  ii) Set the expected Data (beklenen datanin olusturulmasi, Post, Put, Patch)
-        //  iii) Type code to send request ( Talep gondermek icin kod yazimi)
-        //  iv) Do Assertion (dogrulama yapmak)
 
+        //  4. Do Assertion (dogrulama yapmak)
+
+        //  HTTP Status Code should be 200
+        //  Content Type should be JSON
+        //  Status Line should be HTTP/1.1 200 OK
+        response
+                .then()
+                .assertThat()
+                .statusCode(200)
+                .contentType(ContentType.JSON)
+                .statusLine("HTTP/1.1 200 OK");
 
     }
 }
