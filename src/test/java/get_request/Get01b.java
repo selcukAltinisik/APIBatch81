@@ -2,7 +2,7 @@ package get_request;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.junit.Test;
+import org.junit.*;
 
 import static io.restassured.RestAssured.*;
 

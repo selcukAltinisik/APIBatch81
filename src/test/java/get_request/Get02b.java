@@ -44,6 +44,7 @@ public class Get02b extends ReqresBaseUrl {
         //  Status Line should be HTTP/1.1 404 Not Found
         assertEquals("HTTP/1.1 404 Not Found",response.statusLine());
 
+
         //  Server is "cloudflare"
         assertEquals("cloudflare",response.header("Server"));
 

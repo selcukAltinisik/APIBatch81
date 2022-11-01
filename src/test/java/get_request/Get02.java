@@ -28,7 +28,7 @@ public class Get02 {
     @Test
     public void get01(){
         //  i)  Set the URL
-        String url= " https://restful-booker.herokuapp.com/booking/1";
+        String url= "https://restful-booker.herokuapp.com/booking/1";
 
         // ii) Set the expected Data (beklenen datanin olusturulmasi, Post, Put, Patch)
 
