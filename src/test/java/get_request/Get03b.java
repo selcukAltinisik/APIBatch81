@@ -28,7 +28,7 @@ public class Get03b {
 
     @Test
     public void get03() {
-        // 1. Set The Url.
+        // 1. Set The Url
 
         //  2. Set the Expected Data (beklenen datanin olusturulmasi, Post, Put, Patch)
 
