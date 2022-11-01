@@ -7,7 +7,7 @@ import org.junit.Test;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.*;
 
-public class get04b extends RestfulBaseUrl {
+public class Get04b extends RestfulBaseUrl {
 
     /*
 

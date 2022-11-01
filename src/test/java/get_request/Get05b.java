@@ -10,7 +10,7 @@ import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
-public class get05b extends ReqresBaseUrl {
+public class Get05b extends ReqresBaseUrl {
 
      /*
         Given
