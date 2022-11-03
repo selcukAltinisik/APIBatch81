@@ -1,9 +1,8 @@
-package get_request;
+package get_requests;
 
-import base_url.ReqresBaseUrl;
+import base_urls.ReqresBaseUrl;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.hamcrest.Matcher;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;

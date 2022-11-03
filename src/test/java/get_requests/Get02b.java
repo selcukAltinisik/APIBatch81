@@ -1,12 +1,10 @@
-package get_request;
+package get_requests;
 
-import base_url.ReqresBaseUrl;
-import io.restassured.http.ContentType;
+import base_urls.ReqresBaseUrl;
 import io.restassured.response.Response;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.*;
-import static io.restassured.RestAssured.requestSpecification;
 import static junit.framework.TestCase.*;
 
 public class Get02b extends ReqresBaseUrl {

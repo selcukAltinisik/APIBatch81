@@ -1,9 +1,8 @@
-package get_request;
+package get_requests;
 
-import base_url.JsonplaceholderBaseUrl;
+import base_urls.JsonplaceholderBaseUrl;
 import io.restassured.response.Response;
 import org.junit.Test;
-import test_data.JsonPlaceHolderTestData;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,7 +10,7 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.*;
 
-public class Get08b extends JsonplaceholderBaseUrl {
+public class Get08 extends JsonplaceholderBaseUrl {
     //De-Serialization: Json datayı Java objesine çevirme
     //Serialization: Java objesini Json formatına çevirme.
     //De-Serialization: Iki türlü yapacağız.
@@ -39,15 +38,18 @@ public class Get08b extends JsonplaceholderBaseUrl {
         */
 
     @Test
-    public void get08b() {
+    public void get08() {
 
         //  1. Set The Url
         spec.pathParams("first","todos","second",2);
 
         //  2. Set the Expected Data 00> Payload (beklenen datanin olusturulmasi, Post, Put, Patch)
-        JsonPlaceHolderTestData objJsonPlaceHolder = new JsonPlaceHolderTestData();
-        Map<String,Object> expectedData = objJsonPlaceHolder.expectedDataMethod(1,"quis ut nam facilis et officia qui",false);
-        System.out.println(expectedData);
+        Map<String,Object> expectedData = new HashMap<>();
+        expectedData.put("userId",1);
+        expectedData.put("id",2);
+        expectedData.put("title", "quis ut nam facilis et officia qui");
+        expectedData.put("completed", false);
+        System.out.println("expectedData = " + expectedData);
 
         //  3. Send The Request And Get The Response ( Talep gondermek icin kod yazimi)
         Response response = given().spec(spec).when().get("/{first}/{second}");
@@ -57,6 +59,7 @@ public class Get08b extends JsonplaceholderBaseUrl {
         Map<String, Object> actualData = response.as(HashMap.class);    //  De-Serialization
         System.out.println("actualData = " + actualData);
         assertEquals(expectedData.get("userId"),actualData.get("userId"));
+        assertEquals(expectedData.get("id"),actualData.get("id"));
         assertEquals(expectedData.get("title"),actualData.get("title"));
         assertEquals(expectedData.get("completed"),actualData.get("completed"));
 

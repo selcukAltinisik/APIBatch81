@@ -1,12 +1,11 @@
-package get_request;
+package get_requests;
 
-import base_url.RestfulBaseUrl;
+import base_urls.RestfulBaseUrl;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.*;
-import static org.hamcrest.Matchers.*;
 import static org.testng.AssertJUnit.assertEquals;
 import static org.testng.AssertJUnit.assertTrue;
 

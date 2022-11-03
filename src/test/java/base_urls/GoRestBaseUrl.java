@@ -1,16 +1,16 @@
-package base_url;
+package base_urls;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Before;
 
-public class JsonplaceholderBaseUrl {
+public class GoRestBaseUrl {
 
     protected RequestSpecification spec;
 
     @Before
     public void setup(){
-        spec = new RequestSpecBuilder().setBaseUri("https://jsonplaceholder.typicode.com").build();
+        spec = new RequestSpecBuilder().setBaseUri("https://gorest.co.in/public/v1").build();
     }
 
 }

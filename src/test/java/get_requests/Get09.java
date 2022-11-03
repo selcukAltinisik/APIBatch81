@@ -1,9 +1,8 @@
-package get_request;
+package get_requests;
 
-import base_url.RestfulBaseUrl;
+import base_urls.RestfulBaseUrl;
 import io.restassured.response.Response;
 import org.junit.Test;
-import test_data.JsonPlaceHolderTestData;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -39,7 +38,7 @@ public class Get09 extends RestfulBaseUrl {
         //  1. Set The Url
         spec.pathParams("first","booking","second",91);
 
-        //  2. Set the Expected Data 00> Payload (beklenen datanin olusturulmasi, Post, Put, Patch)
+        //  2. Set the Expected Data ==> Payload (beklenen datanin olusturulmasi, Post, Put, Patch)
         Map<String,String> bookingDatesMap = new HashMap<>();
         bookingDatesMap.put("checkin","2018-01-01");
         bookingDatesMap.put("checkout","2019-01-01");
@@ -55,9 +54,21 @@ public class Get09 extends RestfulBaseUrl {
 
 
         //  3. Send The Request And Get The Response ( Talep gondermek icin kod yazimi)
-
+        Response response = given().spec(spec).when().get("/{first}/{second}");
+        response.prettyPrint();
 
         //  4. Do Assertion (dogrulama yapmak)
+        Map<String,Object> actualData = response.as(HashMap.class);
+        System.out.println(actualData);
+
+        assertEquals(expectedData.get("firstname"),actualData.get("firstname"));
+        assertEquals(expectedData.get("lastname"),actualData.get("lastname"));
+        assertEquals(expectedData.get("totalprice"),actualData.get("totalprice"));
+        assertEquals(expectedData.get("depositpaid"),actualData.get("depositpaid"));
+        assertEquals(bookingDatesMap.get("checkin"),((Map)(actualData.get("bookingdates"))).get("checkin"));    //  Key-Value ikilileri String-Object
+        // şeklinde olduğundan, Bookingdata value kısmını casting ile Map yaptık.
+        assertEquals(bookingDatesMap.get("checkout"),((Map)(actualData.get("bookingdates"))).get("checkout"));
+        assertEquals(expectedData.get("additionalNeeds"),actualData.get("additionalNeeds"));
 
 
         //  Status code is 200
