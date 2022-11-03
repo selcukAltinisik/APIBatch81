@@ -6,9 +6,11 @@ import io.restassured.response.Response;
 import org.junit.Test;
 import test_data.JsonPlaceHolderTestData;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
+import static org.junit.Assert.assertEquals;
 
 public class Post01 extends JsonplaceholderBaseUrl {
 
@@ -36,7 +38,7 @@ public class Post01 extends JsonplaceholderBaseUrl {
     @Test
     public void post01() {
         //  1. Set The Url
-        spec.pathParam("1","todos");
+        spec.pathParam("first","todos");
 
         //  2. Set the Expected Data ==> Payload (beklenen datanin olusturulmasi, Post, Put, Patch)
         JsonPlaceHolderTestData obj = new JsonPlaceHolderTestData();
@@ -47,7 +49,11 @@ public class Post01 extends JsonplaceholderBaseUrl {
         response.prettyPrint();
 
         //  4. Do Assertion (dogrulama yapmak)
+        Map<String,Object> actualData = response.as(HashMap.class);
 
+        assertEquals(expectedData.get("completed"),actualData.get("completed"));
+        assertEquals(expectedData.get("title"),actualData.get("title"));
+        assertEquals(expectedData.get("userId"),actualData.get("userId"));
 
 
     }
