@@ -36,7 +36,7 @@ public class Put01 extends JsonplaceholderBaseUrl {
 
     @Test
     public void put01() {
-        //  1. Set The Url.
+        //  1. Set The Url
         spec.pathParams("first","todos","second",198);
 
         //  2. Set the Expected Data ==> Payload (beklenen datanin olusturulmasi, Post, Put, Patch)
