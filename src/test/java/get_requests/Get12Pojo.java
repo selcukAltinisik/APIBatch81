@@ -58,7 +58,7 @@ public class Get12Pojo extends RestfulBaseUrl {
         assertEquals(expectedData.getDepositpaid(),actualData.getDepositpaid());
         assertEquals(expectedData.getAdditionalneeds(),actualData.getAdditionalneeds());
 
-        //  1. Yol:.
+        //  1. Yol:
         assertEquals(expectedData.getBookingdates().getCheckin(),actualData.getBookingdates().getCheckin());
         assertEquals(expectedData.getBookingdates().getCheckout(),actualData.getBookingdates().getCheckout());
 
