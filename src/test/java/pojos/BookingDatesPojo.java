@@ -4,8 +4,8 @@ public class BookingDatesPojo {
 
     //  1)  Tüm key'ler için private variable'ler oluşturduk.
 
-    protected String checkin;
-    protected String checkout;
+    private String checkin;
+    private String checkout;
 
     //  2)  Tüm parametrelerle ve parametresiz constructor'lar oluşturuyoruz.
     public BookingDatesPojo(String checkin, String checkout) {
