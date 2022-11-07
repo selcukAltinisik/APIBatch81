@@ -48,7 +48,7 @@ public class Get12Pojo extends RestfulBaseUrl {
         Response response = given().spec(spec).when().get("/{first}/{second}");
         response.prettyPrint();
 
-        //  4. Do Assertion (dogrulama yapmak)
+        //  4. Do Assertion (dogrulama yapmak).
         BookingPojo actualData = response.as(BookingPojo.class);
         System.out.println("actualData = " + actualData);
 
