@@ -21,15 +21,15 @@ public class Get12Pojo extends RestfulBaseUrl {
         And
             Response body is like:
                  {
-                 "firstname": "Ali",
-                 "lastname": "Can",
-                 "totalprice": 999,
+                 "firstname": "Jim",
+                 "lastname": "ozan",
+                 "totalprice": 111,
                  "depositpaid": true,
                  "bookingdates": {
-                                  "checkin": "2021-09-21",
-                                  "checkout": "2021-12-21"
+                                  "checkin": "2022-01-01",
+                                  "checkout": "2022-01-01"
                                  },
-                 "additionalneeds": "Breakfast"
+                 "additionalneeds": "kahvaltı"
                  }
         */
 
@@ -39,9 +39,10 @@ public class Get12Pojo extends RestfulBaseUrl {
         spec.pathParams("first","booking","second",19);
 
         //  2. Set the Expected Data ==> Payload (beklenen datanin olusturulmasi, Post, Put, Patch)
-        BookingDatesPojo bookingDatesPojo = new BookingDatesPojo("2021-09-21","2021-12-21");
+        BookingDatesPojo bookingDatesPojo = new BookingDatesPojo("2022-01-01","2022-01-01");
         System.out.println(bookingDatesPojo.toString());
-        BookingPojo expectedData = new BookingPojo("Ali","Can",999,true,bookingDatesPojo,"Breakfast");
+
+        BookingPojo expectedData = new BookingPojo("Jim","ozan",111,true,bookingDatesPojo,"kahvaltı");
         System.out.println("expectedData = " + expectedData);
 
         //  3. Send The Request And Get The Response ( Talep gondermek icin kod yazimi)
@@ -64,6 +65,7 @@ public class Get12Pojo extends RestfulBaseUrl {
 
         //  2. Yol:
         assertEquals(bookingDatesPojo.getCheckin(),actualData.getBookingdates().getCheckin());
+        assertEquals(bookingDatesPojo.getCheckout(),actualData.getBookingdates().getCheckout());
         assertEquals(bookingDatesPojo.getCheckout(),actualData.getBookingdates().getCheckout());
 
 
