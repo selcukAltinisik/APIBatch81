@@ -19,7 +19,7 @@ public class ObjectMapperUtils {
         T javaResult = null;
 
         try {
-            javaResult = mapper.readValue(json,cls)
+            javaResult = mapper.readValue(json,cls);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
