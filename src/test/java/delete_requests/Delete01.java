@@ -34,7 +34,7 @@ public class Delete01 extends JsonplaceholderBaseUrl {
         // 3) Send the Request and Get the Response
         Response response = given().spec(spec).when().delete("/{first}/{second}");
 
-        // 4) Do Assertion
+        // 4) Do Assertion.
         Map actualData = ObjectMapperUtils.convertJsonToJava(response.asString(), HashMap.class);
 
         assertEquals(200,response.getStatusCode());
