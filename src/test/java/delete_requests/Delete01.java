@@ -13,7 +13,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class Delete01 extends JsonplaceholderBaseUrl {
-      /*
+      /*.
         Given
             https://jsonplaceholder.typicode.com/todos/198
         When
