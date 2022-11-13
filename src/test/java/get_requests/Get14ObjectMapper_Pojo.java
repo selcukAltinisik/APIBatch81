@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 
 public class Get14ObjectMapper_Pojo extends JsonplaceholderBaseUrl {
 
-    /*
+    /*.
         Given
 	        https://jsonplaceholder.typicode.com/todos/198
         When
