@@ -1,4 +1,4 @@
-package put_requests;
+package pojos.put_requests;
 
 import base_urls.JsonplaceholderBaseUrl;
 import io.restassured.http.ContentType;
