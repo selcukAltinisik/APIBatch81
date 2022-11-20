@@ -38,7 +38,7 @@ public class Put02 extends DummyRestApiBaseUrl {
      */
 
 
-    /*.
+    /*
 Given
     https://dummy.restapiexample.com/api/v1/update/21
      {

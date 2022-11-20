@@ -38,7 +38,7 @@ public class Get15 extends RestfulBaseUrl {
         //Set the Url
         spec.pathParams("first","booking","second",22);
 
-        //Set the expected Data
+        //Set the expected Data.
         BookingDatesPojo bookingDatesPojo = new BookingDatesPojo("2013-02-23","2014-10-23");
         BookingPojo expectedData = new BookingPojo("Sally","Brown",111,true,bookingDatesPojo,"Breakfast");
 
