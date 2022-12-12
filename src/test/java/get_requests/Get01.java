@@ -21,7 +21,7 @@ public class Get01 {
             - Then  : Istek yaptiktan (request gonderdikten sonra) dogrulama
             - And   : Coklu islemlerde kullanacagiz
 
-        c) Test Kodlarimizi Yazmaya Baslayacagiz.
+        c) Test Kodlarimizi Yazmaya Baslayacagiz
 
             i)  Set the URL,
             ii) Set the expected Data (beklenen datanin olusturulmasi, Post, Put, Patch)
