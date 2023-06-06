@@ -73,7 +73,7 @@ public class Get01 {
         // Headers konsola yazdiralim
         System.out.println("Headers : "+response.getHeaders());
 
-        // Time konsola yazdiralim.
+        // Time konsola yazdiralim..
 
         System.out.println("Time : "+response.getTime());
 
